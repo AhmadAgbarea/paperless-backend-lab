@@ -7,20 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public forecasts?: WeatherForecast[];
+  public currencyResult?: CurrencyResult;
+  selectedMonth : number = 11;
+  selectedYear: number = 21;
+  http: HttpClient;
+  onSubmit() {
+    this.http.get<CurrencyResult>('/api/currency/'+this.selectedYear + this.selectedMonth).subscribe(result => {
+      this.currencyResult = result;
+      console.log(result.graph);
+    }, error => console.error(error));
+  }
 
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+    this.http = http;
   }
 
   title = 'WebApp';
 }
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+export interface CurrencyResult {
+  graph: Record<string, number>
+  min: number
+  max: number
 }

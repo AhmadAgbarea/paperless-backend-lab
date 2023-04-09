@@ -18,7 +18,8 @@ namespace Func
             builder.Services.AddLogging();
             Console.WriteLine("Add Configuration");
             builder.Services.AddSingleton<IConfiguration>(Configuration);
-            
+            builder.Services.AddSingleton<ExchangeRateService>();
+
             //AddSwagger(builder.Services);
         }
 

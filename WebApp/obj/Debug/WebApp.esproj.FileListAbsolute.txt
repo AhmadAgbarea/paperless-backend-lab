@@ -1,0 +1,2 @@
+C:\Users\admin-igAhmad\source\repos\Paper-less\WebApp\obj\Debug\WebApp.esproj.SuggestedBindingRedirects.cache
+C:\Users\admin-igAhmad\source\repos\Paper-less\WebApp\obj\Debug\WebApp.esproj.CoreCompileInputs.cache

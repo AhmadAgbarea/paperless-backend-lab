@@ -1,5 +1,16 @@
-<h1 id="tableLabel">Weather forecast</h1>
-
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>menu</mat-icon>
+   </button>
+   <span style="margin: 20px;">Paperless </span>
+   <span class="example-spacer"></span>
+   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon>favorite</mat-icon>
+   </button>
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+ </mat-toolbar>
 <p>This component demonstrates fetching data from the server.</p>
 
 <form (ngSubmit)="onSubmit()">

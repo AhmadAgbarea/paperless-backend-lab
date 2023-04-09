@@ -10,6 +10,7 @@ export class AppComponent {
   public currencyResult?: CurrencyResult;
   selectedMonth : number = 11;
   selectedYear: number = 21;
+  
   http: HttpClient;
   onSubmit() {
     this.http.get<CurrencyResult>('/api/currency/'+this.selectedYear + this.selectedMonth).subscribe(result => {

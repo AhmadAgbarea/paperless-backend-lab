@@ -11,18 +11,17 @@
     <mat-icon>share</mat-icon>
   </button>
  </mat-toolbar>
-<p>This component demonstrates fetching data from the server.</p>
 
 <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="month">Month:</label>
-      <input type="number" class="form-control" id="month" name="month" [(ngModel)]="selectedMonth" required>
-    </div>
-    <div class="form-group">
-      <label for="year">Year:</label>
-      <input type="number" class="form-control" id="year" name="year" [(ngModel)]="selectedYear" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <mat-form-field class="example-full-width">
+        <mat-label>Year</mat-label>
+        <input type="number" maxlength="2" minlength="2" matInput placeholder="Month" [(ngModel)]="selectedMonth"  id="month" name="month" required >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Month</mat-label>
+        <input type="number" matInput placeholder="Year" id="year" name="year" [(ngModel)]="selectedYear">
+      </mat-form-field>
+      <button type="submit" mat-raised-button>Submit</button>
   </form>
 <div *ngIf="currencyResult">
     <div> MAX: {{ currencyResult.max}}</div><br>

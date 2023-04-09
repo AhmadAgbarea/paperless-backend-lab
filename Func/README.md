@@ -61,6 +61,7 @@ graph
 min	3.0861
 max	3.1906
 ```
+![Screenshot(4)](https://user-images.githubusercontent.com/104764679/230756465-e5e95b8a-7445-4a5b-92c1-81b0a3f47bbd.png)
 
 # Configuration
 
